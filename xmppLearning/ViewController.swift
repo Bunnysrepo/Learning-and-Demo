@@ -9,7 +9,7 @@
 import UIKit
 import XMPPFramework
 import CocoaLumberjack
-var PASSWORD : String = "92905741491234"
+var PASSWORD : String = "YOURPASSWORDSTRING"
 class ViewController: UIViewController {
     @IBOutlet weak var msgTxt: UITextField!
     @IBOutlet weak var JabberId: UITextField!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
        // xmppRoaster.autoAcceptKnownPresenceSubscriptionRequests = true
         // Do any additional setup after loading the view, typically from a nib.
         
-        connectioncCall(hostname: "198.74.57.124", hostport: 5222, userIdentity : "9290574149@eazi.ai")
+        connectioncCall(hostname: "YOUR HOSTNAME", hostport: YOURPORTNUMBER, userIdentity : "YOUR JID")
         
     }
 
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     {
         
         let msgStr = msgTxt.text!
-        let toID = XMPPJID(string: "919632029798@eazi.ai")
+        let toID = XMPPJID(string: "YOURTOID")
         let message = XMPPMessage(type: "chat", to: toID, elementID: "hfgfyg")
         message.addBody(msgStr)
         let streamobject = self.XmppController.XmppStream
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
     
 //    func addingUser()
 //    {
-//        xmppRoaster.addUser(XMPPJID(string: "918528628523@eazi.ai")!, withNickname: "the name is kaile", groups: ["a1", "a2"], subscribeToPresence: true)
+//        xmppRoaster.addUser(XMPPJID(string: "915528628523@eazi.ai")!, withNickname: "the name is kaile", groups: ["a1", "a2"], subscribeToPresence: true)
 //        xmppRoaster.subscribePresence(toUser: <#T##XMPPJID#>)
 ////         }
     
@@ -125,7 +125,7 @@ class ViewController: UIViewController {
     
 //    func createroom()
 //    {
-//        guard let roomid = XMPPJID(string: "Eazi@muc.eazi.ai")
+//        guard let roomid = XMPPJID(string: "")
 //            else {
 //                return
 //        }
@@ -143,7 +143,7 @@ class ViewController: UIViewController {
     
 //    func InvitePartner()
 //    {
-//        let jid = XMPPJID(string: "919632029798@eazi.ai")
+//        let jid = XMPPJID(string: "919652029798")
 //        room.inviteUser(jid!, withMessage: "Hi Maru sir,Intrested to join our group")
 //        print("Invitation sent")
 //    }
@@ -194,8 +194,8 @@ class ViewController: UIViewController {
 //    {
 //        let qry = DDXMLElement(name: "query", xmlns: "http://jabber.org/protocol/disco#items") as! DDXMLElement
 //        //let query = try? DDXMLElement(xmlString: "<query xmlns='http://jabber.org/protocol/disco#items'/>")
-//        let iq = DDXMLElement.element(withName: "iq") as! DDXMLElement//element(withName: "from", stringValue: "9290574149@eazi.ai/TV") as! DDXMLElement
-//        iq.addAttribute(withName: "from", stringValue: "9290574149@eazi.ai/tv")
+//        let iq = DDXMLElement.element(withName: "iq") as! DDXMLElement//element(withName: "from", stringValue: ") as! DDXMLElement
+//        iq.addAttribute(withName: "from", stringValue: "")
 //        iq.addAttribute(withName: "id", stringValue: "C6CF8EEE-B74E-45C8-8881-89BD0835056E")
 //        iq.addAttribute(withName: "to", stringValue: "eazi.ai")
 //        iq.addAttribute(withName: "type", stringValue: "get")
@@ -239,7 +239,7 @@ class ViewController: UIViewController {
 //    func send_groupmessage()
 //    {
 //        let messagestring = "Hi eazi "
-//        let message = XMPPMessage(type: "groupchat", to: XMPPJID(string: "123@eazi.ai"), elementID: "dgfchv")
+//        let message = XMPPMessage(type: "groupchat", to: XMPPJID(string: ""), elementID: "dgfchv")
 //        message.addBody(messagestring)
 //        room.send(message)
 //    }
